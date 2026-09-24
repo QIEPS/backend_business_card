@@ -18,7 +18,7 @@ model Profile {
   description String
 
   links      ProfessionalLink[]
-  experience Experience[]
+  experiences Experience[]
   projects   Project[]
   skills     Skill[]
 }
@@ -57,7 +57,7 @@ model Achievement {
   description  String
   experienceId String @db.Uuid
 
-  experiences Experience @relation(fields: [experienceId], references: [id])
+  experience Experience @relation(fields: [experienceId], references: [id])
 }
 
 model Project {
