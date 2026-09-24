@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: business_card
       POSTGRES_DB: business_card
     ports:
-      - "5432:5432"
+      - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
