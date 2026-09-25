@@ -189,15 +189,6 @@ try {
     });
   }
 
-  await prisma.project.deleteMany({
-    where: {
-      id: 'A4D86AA5-D0B5-408F-9EC0-40DFA392CADC',
-      profileId: PROFILE_ID,
-      name: 'At-Work_Project',
-      url: 'https://github.com/',
-    },
-  });
-
   for (const link of professionalLinks) {
     await prisma.professionalLink.upsert({
       where: { id: link.id },

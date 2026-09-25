@@ -10,7 +10,7 @@ export class ProfileService {
       include: {
         links: true,
         skills: true,
-        projects: true, 
+        projects: true,
         experiences: {
           include: { achievements: true },
         },

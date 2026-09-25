@@ -1,7 +1,5 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './app.controller.js';
-import { AppService } from './app.service.js';
 import { validateEnvironment } from './config/validate-environment.js';
 import { PrismaModule } from './prisma/prisma.module.js';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
@@ -21,7 +19,5 @@ import { ProfileModule } from './profile/profile.module.js';
     }),
     ProfileModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule {}
