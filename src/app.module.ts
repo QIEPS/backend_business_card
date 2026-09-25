@@ -15,6 +15,7 @@ import { ProfileModule } from './profile/profile.module.js';
       driver: ApolloDriver,
       autoSchemaFile: true,
       graphiql: false,
+      introspection: true, // Включил НАМЕРЕНО, что бы можно было посмотреть схему после деплоя
       plugins: [ApolloServerPluginLandingPageLocalDefault()],
     }),
     ProfileModule,
