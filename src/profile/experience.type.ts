@@ -13,6 +13,9 @@ export class ExperienceType {
   position: string;
 
   @Field()
+  description: string;
+
+  @Field()
   startDate: Date;
 
   @Field(() => Date, { nullable: true })

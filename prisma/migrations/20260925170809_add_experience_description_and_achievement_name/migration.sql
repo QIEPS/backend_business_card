@@ -1,0 +1,5 @@
+ALTER TABLE "Experience" ADD COLUMN "description" TEXT NOT NULL DEFAULT '';
+ALTER TABLE "Experience" ALTER COLUMN "description" DROP DEFAULT;
+
+ALTER TABLE "Achievement" ADD COLUMN "name" TEXT NOT NULL DEFAULT '';
+ALTER TABLE "Achievement" ALTER COLUMN "name" DROP DEFAULT;

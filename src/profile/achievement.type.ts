@@ -6,5 +6,8 @@ export class AchievementType {
   id: string;
 
   @Field()
+  name: string;
+
+  @Field()
   description: string;
 }

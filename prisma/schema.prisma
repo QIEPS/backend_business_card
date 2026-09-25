@@ -17,10 +17,10 @@ model Profile {
   name        String
   description String
 
-  links      ProfessionalLink[]
+  links       ProfessionalLink[]
   experiences Experience[]
-  projects   Project[]
-  skills     Skill[]
+  projects    Project[]
+  skills      Skill[]
 }
 
 model Skill {
@@ -41,12 +41,13 @@ model ProfessionalLink {
 }
 
 model Experience {
-  id        String    @id @default(uuid()) @db.Uuid
-  company   String
-  position  String
-  startDate DateTime
-  endDate   DateTime?
-  profileId String    @db.Uuid
+  id          String    @id @default(uuid()) @db.Uuid
+  company     String
+  position    String
+  description String
+  startDate   DateTime
+  endDate     DateTime?
+  profileId   String    @db.Uuid
 
   profile      Profile       @relation(fields: [profileId], references: [id])
   achievements Achievement[]
@@ -54,6 +55,7 @@ model Experience {
 
 model Achievement {
   id           String @id @default(uuid()) @db.Uuid
+  name         String
   description  String
   experienceId String @db.Uuid
 
